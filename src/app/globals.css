@@ -2,32 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.ant-menu {
+  border-inline-end: none !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.ant-table-wrapper .ant-table-thead > tr > th {
+  background: white !important;
+  color: #a0aec0;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.ant-picker-calendar .ant-picker-panel .ant-picker-content > thead {
+  background-color: #f4f7fe;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.ant-picker-calendar .ant-picker-date-panel .ant-picker-content th {
+  padding-block: 10px;
+}
+
+.ant-picker-cell-inner::before {
+  border: 1px solid #6c63ff !important;
+}
+
+.ant-picker-calendar
+  .ant-picker-cell-in-view.ant-picker-cell-selected:not(
+    .ant-picker-cell-disabled
+  )
+  .ant-picker-cell-inner {
+  background: #6c63ff !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #6c63ff;
+  border-color: #6c63ff;
+}
+
+.ant-menu .ant-menu-item .ant-menu-item-icon {
+  font-size: 16px;
+}
+
+.ant-menu-light .ant-menu-item,
+.ant-menu-light > .ant-menu .ant-menu-item,
+.ant-menu-light .ant-menu-submenu-title,
+.ant-menu-light > .ant-menu .ant-menu-submenu-title {
+  color: #8f9bba;
+  display: flex;
+  align-items: center;
+}
+
+.ant-menu-light .ant-menu-item-selected,
+.ant-menu-light > .ant-menu .ant-menu-item-selected {
+  background: none;
+  border-radius: 0px;
+  border-right: 3px solid #6c63ff;
+}
+
+.ant-menu-light .ant-menu-item-selected,
+.ant-menu-light
+  > .ant-menu
+  .ant-menu-item-selected
+  > .ant-menu
+  .ant-menu-item
+  .ant-menu-item-icon {
+  color: #6c63ff;
+}
+
+.ant-menu-light .ant-menu-item-selected a,
+.ant-menu-light > .ant-menu .ant-menu-item-selected a,
+.ant-menu-light .ant-menu-item-selected a:hover,
+.ant-menu-light > .ant-menu .ant-menu-item-selected a:hover {
+  color: #2d3748;
+}
+
+.ant-switch.ant-switch-checked .ant-switch-inner {
+  background: #6c63ff;
+}
+
+.ant-card .ant-card-cover img,
+.ant-card .ant-card-cover img + .ant-image-mask {
+  border-radius: 8px 8px 0 0;
+  border-radius: 40px;
 }
